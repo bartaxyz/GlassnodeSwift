@@ -8,9 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4A136A832B0E9EB7001AA82A /* glassnode_swift.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4A136A822B0E9EB7001AA82A /* glassnode_swift.docc */; };
-		4A136A892B0E9EB7001AA82A /* glassnode_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A136A7E2B0E9EB7001AA82A /* glassnode_swift.framework */; };
-		4A136A8E2B0E9EB7001AA82A /* glassnode_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136A8D2B0E9EB7001AA82A /* glassnode_swiftTests.swift */; };
+		4A136A892B0E9EB7001AA82A /* GlassnodeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A136A7E2B0E9EB7001AA82A /* GlassnodeSwift.framework */; };
 		4A136A8F2B0E9EB7001AA82A /* glassnode_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A136A812B0E9EB7001AA82A /* glassnode_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A136A9B2B12259B001AA82A /* MetricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136A9A2B12259B001AA82A /* MetricModel.swift */; };
+		4A136A9E2B122656001AA82A /* StrapiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136A9D2B122656001AA82A /* StrapiService.swift */; };
+		4A136AA12B1226C5001AA82A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AA02B1226C5001AA82A /* NetworkService.swift */; };
+		4A136AA32B1226FC001AA82A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AA22B1226FC001AA82A /* NetworkError.swift */; };
+		4A136AA72B122A3F001AA82A /* StrapiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AA62B122A3F001AA82A /* StrapiServiceTest.swift */; };
+		4A136AA92B122B8A001AA82A /* GlassnodeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AA82B122B8A001AA82A /* GlassnodeSwift.swift */; };
+		4A136AAB2B122C75001AA82A /* StrapiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AAA2B122C75001AA82A /* StrapiEndpoints.swift */; };
+		4A136AAE2B122CC9001AA82A /* MetricsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AAD2B122CC9001AA82A /* MetricsLoader.swift */; };
+		4A136AB02B122E5E001AA82A /* GlassnodeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AAF2B122E5E001AA82A /* GlassnodeSwiftTests.swift */; };
+		4A136AB22B12302D001AA82A /* MetricsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AB12B12302D001AA82A /* MetricsLoaderTests.swift */; };
+		4A136AB62B123154001AA82A /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AB52B123154001AA82A /* DataLoader.swift */; };
+		4A136AB82B12321E001AA82A /* GlassnodeSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136AB72B12321E001AA82A /* GlassnodeSwiftError.swift */; };
+		4A136ABB2B12329B001AA82A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136ABA2B12329B001AA82A /* APIService.swift */; };
+		4A136ABE2B1232C1001AA82A /* MetricDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136ABD2B1232C1001AA82A /* MetricDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,16 +32,29 @@
 			containerPortal = 4A136A752B0E9EB7001AA82A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4A136A7D2B0E9EB7001AA82A;
-			remoteInfo = "glassnode-swift";
+			remoteInfo = GlassnodeSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A136A7E2B0E9EB7001AA82A /* glassnode_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = glassnode_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A136A7E2B0E9EB7001AA82A /* GlassnodeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlassnodeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A136A812B0E9EB7001AA82A /* glassnode_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glassnode_swift.h; sourceTree = "<group>"; };
 		4A136A822B0E9EB7001AA82A /* glassnode_swift.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = glassnode_swift.docc; sourceTree = "<group>"; };
-		4A136A882B0E9EB7001AA82A /* glassnode-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glassnode-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A136A8D2B0E9EB7001AA82A /* glassnode_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = glassnode_swiftTests.swift; sourceTree = "<group>"; };
+		4A136A882B0E9EB7001AA82A /* GlassnodeSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlassnodeSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A136A9A2B12259B001AA82A /* MetricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricModel.swift; sourceTree = "<group>"; };
+		4A136A9D2B122656001AA82A /* StrapiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiService.swift; sourceTree = "<group>"; };
+		4A136AA02B1226C5001AA82A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4A136AA22B1226FC001AA82A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4A136AA62B122A3F001AA82A /* StrapiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiServiceTest.swift; sourceTree = "<group>"; };
+		4A136AA82B122B8A001AA82A /* GlassnodeSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassnodeSwift.swift; sourceTree = "<group>"; };
+		4A136AAA2B122C75001AA82A /* StrapiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiEndpoints.swift; sourceTree = "<group>"; };
+		4A136AAD2B122CC9001AA82A /* MetricsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsLoader.swift; sourceTree = "<group>"; };
+		4A136AAF2B122E5E001AA82A /* GlassnodeSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassnodeSwiftTests.swift; sourceTree = "<group>"; };
+		4A136AB12B12302D001AA82A /* MetricsLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsLoaderTests.swift; sourceTree = "<group>"; };
+		4A136AB52B123154001AA82A /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		4A136AB72B12321E001AA82A /* GlassnodeSwiftError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassnodeSwiftError.swift; sourceTree = "<group>"; };
+		4A136ABA2B12329B001AA82A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4A136ABD2B1232C1001AA82A /* MetricDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A136A892B0E9EB7001AA82A /* glassnode_swift.framework in Frameworks */,
+				4A136A892B0E9EB7001AA82A /* GlassnodeSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +79,8 @@
 		4A136A742B0E9EB7001AA82A = {
 			isa = PBXGroup;
 			children = (
-				4A136A802B0E9EB7001AA82A /* glassnode-swift */,
-				4A136A8C2B0E9EB7001AA82A /* glassnode-swiftTests */,
+				4A136A802B0E9EB7001AA82A /* Sources */,
+				4A136A8C2B0E9EB7001AA82A /* Tests */,
 				4A136A7F2B0E9EB7001AA82A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,27 +88,104 @@
 		4A136A7F2B0E9EB7001AA82A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A136A7E2B0E9EB7001AA82A /* glassnode_swift.framework */,
-				4A136A882B0E9EB7001AA82A /* glassnode-swiftTests.xctest */,
+				4A136A7E2B0E9EB7001AA82A /* GlassnodeSwift.framework */,
+				4A136A882B0E9EB7001AA82A /* GlassnodeSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4A136A802B0E9EB7001AA82A /* glassnode-swift */ = {
+		4A136A802B0E9EB7001AA82A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4A136AB92B12328F001AA82A /* APIService */,
+				4A136AAC2B122CB6001AA82A /* Loaders */,
+				4A136A9F2B1226B1001AA82A /* NetworkService */,
+				4A136A982B1224E9001AA82A /* StrapiService */,
 				4A136A812B0E9EB7001AA82A /* glassnode_swift.h */,
 				4A136A822B0E9EB7001AA82A /* glassnode_swift.docc */,
+				4A136AA82B122B8A001AA82A /* GlassnodeSwift.swift */,
+				4A136AB72B12321E001AA82A /* GlassnodeSwiftError.swift */,
 			);
-			path = "glassnode-swift";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		4A136A8C2B0E9EB7001AA82A /* glassnode-swiftTests */ = {
+		4A136A8C2B0E9EB7001AA82A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4A136A8D2B0E9EB7001AA82A /* glassnode_swiftTests.swift */,
+				4A136AB42B12313E001AA82A /* StrapiService */,
+				4A136AB32B123135001AA82A /* Loaders */,
+				4A136AAF2B122E5E001AA82A /* GlassnodeSwiftTests.swift */,
 			);
-			path = "glassnode-swiftTests";
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		4A136A982B1224E9001AA82A /* StrapiService */ = {
+			isa = PBXGroup;
+			children = (
+				4A136A992B122528001AA82A /* Models */,
+				4A136A9D2B122656001AA82A /* StrapiService.swift */,
+				4A136AAA2B122C75001AA82A /* StrapiEndpoints.swift */,
+			);
+			path = StrapiService;
+			sourceTree = "<group>";
+		};
+		4A136A992B122528001AA82A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A136A9A2B12259B001AA82A /* MetricModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A136A9F2B1226B1001AA82A /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				4A136AA02B1226C5001AA82A /* NetworkService.swift */,
+				4A136AA22B1226FC001AA82A /* NetworkError.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		4A136AAC2B122CB6001AA82A /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				4A136AAD2B122CC9001AA82A /* MetricsLoader.swift */,
+				4A136AB52B123154001AA82A /* DataLoader.swift */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		4A136AB32B123135001AA82A /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				4A136AB12B12302D001AA82A /* MetricsLoaderTests.swift */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		4A136AB42B12313E001AA82A /* StrapiService */ = {
+			isa = PBXGroup;
+			children = (
+				4A136AA62B122A3F001AA82A /* StrapiServiceTest.swift */,
+			);
+			path = StrapiService;
+			sourceTree = "<group>";
+		};
+		4A136AB92B12328F001AA82A /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				4A136ABC2B1232B6001AA82A /* Models */,
+				4A136ABA2B12329B001AA82A /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		4A136ABC2B1232B6001AA82A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A136ABD2B1232C1001AA82A /* MetricDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +202,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A136A7D2B0E9EB7001AA82A /* glassnode-swift */ = {
+		4A136A7D2B0E9EB7001AA82A /* GlassnodeSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A136A922B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "glassnode-swift" */;
+			buildConfigurationList = 4A136A922B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "GlassnodeSwift" */;
 			buildPhases = (
 				4A136A792B0E9EB7001AA82A /* Headers */,
 				4A136A7A2B0E9EB7001AA82A /* Sources */,
@@ -112,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = "glassnode-swift";
-			productName = "glassnode-swift";
-			productReference = 4A136A7E2B0E9EB7001AA82A /* glassnode_swift.framework */;
+			name = GlassnodeSwift;
+			productName = GlassnodeSwift;
+			productReference = 4A136A7E2B0E9EB7001AA82A /* GlassnodeSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4A136A872B0E9EB7001AA82A /* glassnode-swiftTests */ = {
+		4A136A872B0E9EB7001AA82A /* GlassnodeSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A136A952B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "glassnode-swiftTests" */;
+			buildConfigurationList = 4A136A952B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "GlassnodeSwiftTests" */;
 			buildPhases = (
 				4A136A842B0E9EB7001AA82A /* Sources */,
 				4A136A852B0E9EB7001AA82A /* Frameworks */,
@@ -130,9 +233,9 @@
 			dependencies = (
 				4A136A8B2B0E9EB7001AA82A /* PBXTargetDependency */,
 			);
-			name = "glassnode-swiftTests";
-			productName = "glassnode-swiftTests";
-			productReference = 4A136A882B0E9EB7001AA82A /* glassnode-swiftTests.xctest */;
+			name = GlassnodeSwiftTests;
+			productName = GlassnodeSwiftTests;
+			productReference = 4A136A882B0E9EB7001AA82A /* GlassnodeSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A136A782B0E9EB7001AA82A /* Build configuration list for PBXProject "glassnode-swift" */;
+			buildConfigurationList = 4A136A782B0E9EB7001AA82A /* Build configuration list for PBXProject "GlassnodeSwift" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +269,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A136A7D2B0E9EB7001AA82A /* glassnode-swift */,
-				4A136A872B0E9EB7001AA82A /* glassnode-swiftTests */,
+				4A136A7D2B0E9EB7001AA82A /* GlassnodeSwift */,
+				4A136A872B0E9EB7001AA82A /* GlassnodeSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +298,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A136A832B0E9EB7001AA82A /* glassnode_swift.docc in Sources */,
+				4A136A9E2B122656001AA82A /* StrapiService.swift in Sources */,
+				4A136AA32B1226FC001AA82A /* NetworkError.swift in Sources */,
+				4A136AA12B1226C5001AA82A /* NetworkService.swift in Sources */,
+				4A136ABB2B12329B001AA82A /* APIService.swift in Sources */,
+				4A136AAE2B122CC9001AA82A /* MetricsLoader.swift in Sources */,
+				4A136AA92B122B8A001AA82A /* GlassnodeSwift.swift in Sources */,
+				4A136A9B2B12259B001AA82A /* MetricModel.swift in Sources */,
+				4A136AAB2B122C75001AA82A /* StrapiEndpoints.swift in Sources */,
+				4A136AB82B12321E001AA82A /* GlassnodeSwiftError.swift in Sources */,
+				4A136AB62B123154001AA82A /* DataLoader.swift in Sources */,
+				4A136ABE2B1232C1001AA82A /* MetricDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A136A8E2B0E9EB7001AA82A /* glassnode_swiftTests.swift in Sources */,
+				4A136AB22B12302D001AA82A /* MetricsLoaderTests.swift in Sources */,
+				4A136AB02B122E5E001AA82A /* GlassnodeSwiftTests.swift in Sources */,
+				4A136AA72B122A3F001AA82A /* StrapiServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +327,7 @@
 /* Begin PBXTargetDependency section */
 		4A136A8B2B0E9EB7001AA82A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A136A7D2B0E9EB7001AA82A /* glassnode-swift */;
+			target = 4A136A7D2B0E9EB7001AA82A /* GlassnodeSwift */;
 			targetProxy = 4A136A8A2B0E9EB7001AA82A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -364,7 +480,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.glassnode-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
@@ -402,7 +518,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.glassnode-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
@@ -416,6 +532,7 @@
 		4A136A962B0E9EB7001AA82A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73N8SZQ662;
@@ -423,7 +540,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.glassnode-swiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -436,6 +553,7 @@
 		4A136A972B0E9EB7001AA82A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73N8SZQ662;
@@ -443,7 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.glassnode-swiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -456,7 +574,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A136A782B0E9EB7001AA82A /* Build configuration list for PBXProject "glassnode-swift" */ = {
+		4A136A782B0E9EB7001AA82A /* Build configuration list for PBXProject "GlassnodeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A136A902B0E9EB7001AA82A /* Debug */,
@@ -465,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A136A922B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "glassnode-swift" */ = {
+		4A136A922B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "GlassnodeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A136A932B0E9EB7001AA82A /* Debug */,
@@ -474,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A136A952B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "glassnode-swiftTests" */ = {
+		4A136A952B0E9EB7001AA82A /* Build configuration list for PBXNativeTarget "GlassnodeSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A136A962B0E9EB7001AA82A /* Debug */,
