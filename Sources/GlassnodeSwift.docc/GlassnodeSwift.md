@@ -1,4 +1,4 @@
-# ``glassnode_swift``
+# ``GlassnodeSwift``
 
 Summary
 
