@@ -7,12 +7,17 @@
 
 import Foundation
 
-class StrapiService {
+public class StrapiService {
     static let shared = StrapiService()
 
-    private init() {}
+    public init() {}
+    
+    public func fetchAllMetricAssets() async throws -> MetricAssets {
+        let url = URL(string: StrapiEndpoints.allMetricAssets)!
+        return try await NetworkService.shared.request(url: url)
+    }
 
-    func fetchAllMetrics() async throws -> Metrics {
+    public func fetchAllMetrics() async throws -> Metrics {
         let url = URL(string: StrapiEndpoints.allMetrics)!
         return try await NetworkService.shared.request(url: url)
     }

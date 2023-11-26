@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct GlassnodeSwift {
-    static var configuration = Configuration()
+public struct GlassnodeSwift {
+    public static var configuration = Configuration()
 
-    struct Configuration {
+    public struct Configuration {
         var apiKey: String?
+    }
+    
+    public static func fetchAllMetricAssets() async throws -> MetricAssets {
+        return try await StrapiService.shared.fetchAllMetricAssets()
+    }
+    
+    public static func fetchAllMetrics() async throws -> Metrics {
+        return try await StrapiService.shared.fetchAllMetrics()
     }
 }

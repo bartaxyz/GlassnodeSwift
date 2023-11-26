@@ -8,48 +8,48 @@
 import Foundation
 
 // MARK: - Metrics
-struct Metrics: Codable {
-    let data: [Datum]
+public struct Metrics: Codable {
+    public let data: [MetricDatum]
     let meta: Meta
 }
 
 // MARK: - Datum
-struct Datum: Codable {
-    let id: Int
-    let attributes: Attributes
+public struct MetricDatum: Codable {
+    public let id: Int
+    public let attributes: MetricAttributes
 }
 
 // MARK: - Attributes
-struct Attributes: Codable {
-    let name, group, path, shortName: String
-    let formatter: String?
-    let description: Description
-    let tier: Int
-    let metricCode, createdAt, updatedAt: String
-    let isPit, isNew: Bool
+public struct MetricAttributes: Codable {
+    public let name, group, path, shortName: String
+    public let formatter: String?
+    public let description: Description
+    public let tier: Int
+    public let metricCode, createdAt, updatedAt: String
+    public let isPit, isNew: Bool
     let tags: JSONNull?
-    let resolutions: [Resolution]
-    let currencies: [Currency]
-    let formats: [Format]
+    public let resolutions: [Resolution]
+    public let currencies: [Currency]
+    public let formats: [Format]
 }
 
-enum Currency: String, Codable {
+public enum Currency: String, Codable {
     case count = "COUNT"
     case native = "NATIVE"
     case usd = "USD"
 }
 
 // MARK: - Description
-struct Description: Codable {
-    let descriptionDefault: String
-    let eth, aud, brl, cad: String?
-    let chf, cny, eur, gas: String?
-    let gbp, jpy, krw, nzd: String?
-    let sgd, descriptionTRY, wti, xag: String?
-    let xau, bnb, dot, sol: String?
-    let atom, matic, stbl: String?
+public struct Description: Codable {
+    public let descriptionDefault: String
+    public let eth, aud, brl, cad: String?
+    public let chf, cny, eur, gas: String?
+    public let gbp, jpy, krw, nzd: String?
+    public let sgd, descriptionTRY, wti, xag: String?
+    public let xau, bnb, dot, sol: String?
+    public let atom, matic, stbl: String?
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case descriptionDefault = "default"
         case eth = "ETH"
         case aud = "AUD"
@@ -77,12 +77,12 @@ struct Description: Codable {
     }
 }
 
-enum Format: String, Codable {
+public enum Format: String, Codable {
     case csv = "CSV"
     case json = "JSON"
 }
 
-enum Resolution: String, Codable {
+public enum Resolution: String, Codable {
     case the10M = "10m"
     case the1H = "1h"
     case the1Month = "1month"
@@ -91,18 +91,18 @@ enum Resolution: String, Codable {
 }
 
 // MARK: - Meta
-struct Meta: Codable {
+public struct Meta: Codable {
     let pagination: Pagination
 }
 
 // MARK: - Pagination
-struct Pagination: Codable {
-    let start, limit, total: Int
+public struct Pagination: Codable {
+    public let start, limit, total: Int
 }
 
 // MARK: - Encode/decode helpers
 
-class JSONNull: Codable, Hashable {
+public class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true

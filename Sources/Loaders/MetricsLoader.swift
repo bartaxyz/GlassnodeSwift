@@ -10,12 +10,12 @@ import Foundation
 import Combine
 
 extension GlassnodeSwift {
-    class MetricsLoader: ObservableObject {
+    public class MetricsLoader: ObservableObject {
         @Published var metrics: Metrics? = nil
         @Published var isLoading = false
         @Published var error: Error?
         
-        init() {
+        public init() {
             fetchMetrics()
         }
         
