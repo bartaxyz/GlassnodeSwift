@@ -23,14 +23,20 @@ public struct MetricDatum: Codable {
 public struct MetricAttributes: Codable {
     public let name, group, path, shortName: String
     public let formatter: String?
-    public let description: Description
-    public let tier: Int
-    public let metricCode, createdAt, updatedAt: String
-    public let isPit, isNew: Bool
-    let tags: JSONNull?
-    public let resolutions: [Resolution]
-    public let currencies: [Currency]
-    public let formats: [Format]
+    public let description: Description?
+    public let tier: Int?
+    public let metricCode, createdAt, updatedAt: String?
+    public let isPit, isNew: Bool?
+    public let tags: JSONNull?
+    public let resolutions: [Resolution]?
+    public let currencies: [Currency]?
+    public let formats: [Format]?
+    public let metricAssets: FluffyMetricAssets
+    
+    public enum CodingKeys: String, CodingKey {
+        case name, group, path, shortName, formatter, description, tier, metricCode, createdAt, updatedAt, isPit, isNew, tags, resolutions, currencies, formats
+        case metricAssets = "metric_assets"
+    }
 }
 
 public enum Currency: String, Codable {
@@ -82,6 +88,22 @@ public enum Format: String, Codable {
     case json = "JSON"
 }
 
+// MARK: - MetricAssets
+public struct FluffyMetricAssets: Codable {
+    public let data: [FluffyMetricAssetsDatum]
+}
+
+// MARK: - MetricAssetsDatum
+public struct FluffyMetricAssetsDatum: Codable {
+    public let id: Int
+    public let attributes: FluffyAttributes
+}
+
+// MARK: - FluffyAttributes
+public struct FluffyAttributes: Codable {
+    public let name, symbol: String
+}
+
 public enum Resolution: String, Codable {
     case the10M = "10m"
     case the1H = "1h"
@@ -92,7 +114,7 @@ public enum Resolution: String, Codable {
 
 // MARK: - Meta
 public struct Meta: Codable {
-    let pagination: Pagination
+    let pagination: Pagination?
 }
 
 // MARK: - Pagination

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+// MARK: - MetricDatum
+public struct MetricDataDatum: Codable {
+    public let t, v: Int
+}
+
+public typealias MetricData = [MetricDataDatum]

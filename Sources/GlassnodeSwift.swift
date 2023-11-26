@@ -11,7 +11,7 @@ public struct GlassnodeSwift {
     public static var configuration = Configuration()
 
     public struct Configuration {
-        var apiKey: String?
+        public var apiKey: String?
     }
     
     public static func fetchAllMetricAssets() async throws -> MetricAssets {

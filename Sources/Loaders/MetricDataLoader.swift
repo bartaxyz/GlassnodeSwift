@@ -10,19 +10,24 @@ import Foundation
 import Combine
 
 extension GlassnodeSwift {
-    class DataLoader: ObservableObject {
-        // TODO: Update for proper type
-        @Published var data: Metrics? = nil
+    public class MetricDataLoader: ObservableObject {
+        @Published var data: MetricData? = nil
         @Published var isLoading = false
         @Published var error: Error?
         
-        init() {
+        var metricPath: String
+        var assetSymbol: String
+        
+        public init(metricPath: String, assetSymbol: String) {
+            self.metricPath = metricPath
+            self.assetSymbol = assetSymbol
+            
             do {
-                try fetchMetrics()
+                try fetchMetricData()
             } catch {}
         }
         
-        func fetchMetrics() throws {
+        func fetchMetricData() throws {
             guard GlassnodeSwift.configuration.apiKey == nil else {
                 throw GlassnodeSwiftError.apiKeyNotProvided
             }
@@ -31,7 +36,7 @@ extension GlassnodeSwift {
             error = nil
             Task {
                 do {
-                    data = try await StrapiService.shared.fetchAllMetrics()
+                    data = try await APIService.fetchMetricData(metricPath: metricPath, assetSymbol: assetSymbol)
                 } catch {
                     self.error = error
                 }
