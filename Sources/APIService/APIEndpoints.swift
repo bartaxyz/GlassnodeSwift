@@ -11,9 +11,9 @@ struct APIEndpoints {
     static let base = "https://api.glassnode.com"
     static let baseMetric = "/v1/metrics"
     
-    static func dataForLast7DaysQueryItems() -> [URLQueryItem] {
+    static func dataForLastMonthQueryItems() -> [URLQueryItem] {
         let now = Date()
-        let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: now)!
+        let sevenDaysAgo = Calendar.current.date(byAdding: .month, value: -1, to: now)!
 
         let sinceTimestamp = Int(sevenDaysAgo.timeIntervalSince1970)
         let untilTimestamp = Int(now.timeIntervalSince1970)
@@ -30,7 +30,7 @@ struct APIEndpoints {
         components?.queryItems = [
             URLQueryItem(name: "a", value: assetSymbol),
             URLQueryItem(name: "api_key", value: GlassnodeSwift.configuration.apiKey)
-        ] + dataForLast7DaysQueryItems()
+        ] + dataForLastMonthQueryItems()
         
         return components?.url?.absoluteString
     }
