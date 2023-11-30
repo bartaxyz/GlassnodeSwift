@@ -12,19 +12,27 @@ struct APIEndpoints {
     static let baseMetric = "/v1/metrics"
     
     static func getSinceUntilQueryItems(since: Date, until: Date) -> [URLQueryItem] {
-        let sinceTimestamp = Int(since.timeIntervalSince1970)
+        var queryItems = getSinceUntilQueryItems(since: since)
         let untilTimestamp = Int(until.timeIntervalSince1970)
-        
+        queryItems.append(URLQueryItem(name: "u", value: String(untilTimestamp)))
+        return queryItems
+    }
+    
+    static func getSinceUntilQueryItems(since: Date) -> [URLQueryItem] {
+        let sinceTimestamp = Int(since.timeIntervalSince1970)
         return [
-            URLQueryItem(name: "s", value: String(sinceTimestamp)),
-            URLQueryItem(name: "u", value: String(untilTimestamp))
+            URLQueryItem(name: "s", value: String(sinceTimestamp))
         ]
     }
     
     static func dataForLastMonthsQueryItems(monthCount: Int = 3) -> [URLQueryItem] {
         let now = Date()
-        let since = Calendar.current.date(byAdding: .month, value: -monthCount, to: now)!
-        return getSinceUntilQueryItems(since: since, until: now)
+        let since = Calendar.current.date(
+            byAdding: .month,
+            value: -monthCount,
+            to: now
+        )!
+        return getSinceUntilQueryItems(since: since)
     }
     
     static func metricEndpoint(metricPath: String, assetSymbol: String) -> String? {
