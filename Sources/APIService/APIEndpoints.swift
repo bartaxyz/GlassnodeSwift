@@ -13,7 +13,7 @@ struct APIEndpoints {
     
     static func dataForLastMonthQueryItems() -> [URLQueryItem] {
         let now = Date()
-        let sevenDaysAgo = Calendar.current.date(byAdding: .month, value: -1, to: now)!
+        let sevenDaysAgo = Calendar.current.date(byAdding: .month, value: -3, to: now)!
 
         let sinceTimestamp = Int(sevenDaysAgo.timeIntervalSince1970)
         let untilTimestamp = Int(now.timeIntervalSince1970)
